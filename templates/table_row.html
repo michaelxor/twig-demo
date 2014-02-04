@@ -1,0 +1,11 @@
+<tr>
+{% for item in row %}
+    <td>
+    {% if item.type == 'int' %}
+        {{ item.value|number_format(2) }}
+    {% else %}
+        {{ item.value }}
+    {% endif %}
+    </td>
+{% endfor %}
+</tr>

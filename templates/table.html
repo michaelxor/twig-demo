@@ -1,0 +1,12 @@
+<table class="some-table" cellspacing="0" cellpadding="0">
+    <thead>
+        {% for name in table_headers %}
+        <th>{{ name|escape }}</th>
+        {% endfor %}
+    </thead>
+    <tbody>
+        {% for row in table_data %}
+        {% include "table_row.html" with {'row' : row} only %}
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <title>{{ title }}</title>
+            <link rel="stylesheet" href="/css/demo.css">
+        {% endblock %}
+    </head>
+    <body>
+        {% block header %}
+            {% include "header.html" %}
+        {% endblock %}
+
+        {% block content %}
+            {% include view ~ ".html" %}
+        {% endblock %}
+
+        {% block footer %}
+            {% include "next.html" %}
+            {% include "footer.html" %}
+        {% endblock %}
+    </body>
+</html>
